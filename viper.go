@@ -1766,6 +1766,8 @@ func (v *Viper) AllSettings() map[string]interface{} {
 	return m
 }
 
+func (v *Viper) SetKeyDelim(delim string) { v.keyDelim = delim }
+
 // SetFs sets the filesystem to use to read configuration.
 func SetFs(fs afero.Fs) { v.SetFs(fs) }
 func (v *Viper) SetFs(fs afero.Fs) {
